@@ -2,6 +2,7 @@
 {% block content %}
     <h1>Register</h1>
     <form class="POST">
+        {% crsf_token %}
         <div class="container">
             <div class="form-group row">
                 <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Your full name</label>
