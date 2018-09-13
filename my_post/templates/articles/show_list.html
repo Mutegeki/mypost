@@ -1,0 +1,66 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+<h1>Your Details</h1>
+<form>
+    <div class="container">
+        <div class="form-group">
+            <label>Firstname : {{post.first}}</label>
+        </div>
+        <div class="form-group">
+            <label>Lastname : {{post.last}}</label>
+        </div>
+        <div class="form-group">
+            <label>Phonenumber : {{post.phone_number}}</label>
+        </div>
+        <div class="form-group">
+            <label>Email : {{post.email}}</label>
+        </div>
+        <div class="form-group">
+            <label>Social Media Handles : {{post.social} </label>
+        </div>
+    </div>
+</form>
+<h1>Add Your Training Details</h1>
+<form class="POST">
+    {% crsf_token %}
+    <div class="container">
+        <div class="form-group row">
+            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Training Venues</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control form-control-sm" name="Venues" id="colFormLabelSm" placeholder="123">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Number trained</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control form-control-sm" name="trained" id="colFormLabelSm" placeholder="123">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Male</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control form-control-sm" name="male" id="colFormLabelSm"
+                    placeholder="123">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Female</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control form-control-sm" name="female" id="colFormLabelSm" placeholder="123">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Summary report about the training</label>
+            <textarea class="form-control" name="report" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Recommendations of people to follow up for impact assessment</label>
+            <textarea class="form-control" name="recommendation" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <!--<input type="hidden" id="postid" name="post_id" value="{{post.id}}">-->
+	
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+{% endblock %}
