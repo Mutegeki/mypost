@@ -25,9 +25,8 @@ def article_list(request):
                 'post':post
             }
         except IntegrityError as e:
-            print e
             context={'error':"its already exissts"}
-            return render(request'articles/article_list.html', {'post':post})
+            #return render(request'articles/article_list.html',{'post':post})
             #Getting our list template
         return render(request, 'articles/show_list.html',context)
     else:
@@ -35,3 +34,4 @@ def article_list(request):
         # return the register template
         template = loader.get_template('articles/article_list.html')
     return HttpResponse(template.render())
+
