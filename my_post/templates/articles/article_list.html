@@ -5,27 +5,33 @@
         {% crsf_token %}
         <div class="container">
             <div class="form-group row">
-                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Your full name</label>
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Firstname</label>
                 <div class="col-sm-10">
-                    <input type="name" class="form-control form-control-sm" id="colFormLabelSm" placeholder="name">
+                    <input type="name" class="form-control form-control-sm" name="first" id="colFormLabelSm" placeholder="firstname">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Lastname</label>
+                <div class="col-sm-10">
+                    <input type="name" class="form-control form-control-sm" name="last" id="colFormLabelSm" placeholder="lastname">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Phone</label>
                 <div class="col-sm-10">
-                    <input type="phone" class="form-control form-control-sm" id="colFormLabelSm" placeholder="+256">
+                    <input type="phone" class="form-control form-control-sm" name="phone_number" id="colFormLabelSm" placeholder="+256">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+                    <input type="email" class="form-control form-control-sm" name="email" id="colFormLabelSm" placeholder="col-form-label-sm">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Social Media Handles</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+                    <input type="text" class="form-control form-control-sm" name="Social" id="colFormLabelSm" placeholder="col-form-label-sm">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
