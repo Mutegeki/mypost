@@ -10,5 +10,13 @@ class Post(models.Model):
 	email = models.EmailField(max_length=70, blank=True, null=True, unique=True)
 	social = models.CharField(max_lengt=50)
 
-    def __str__(self):
-		return self.name
+    #def __str__(self):
+	#	return self.name
+
+class Training(models.Model):
+	venues = modals.CharField()
+	trained = modals.IntegerField()
+	male = madals.IntegerField()
+	female = modals.IntegerField()
+	report = modals.CharField()
+	recommendation = modals.CharField()
