@@ -8,15 +8,18 @@ class Post(models.Model):
 	last= models.CharField(max_length=25,blank=True)
 	phone_number = models.CharField(max_length=17, blank=True)
 	email = models.EmailField(max_length=70, blank=True, null=True, unique=True)
-	social = models.CharField(max_length=50)
+	social_media = models.CharField(max_length=50)
+	#thumb = models.ImageField(default='default.png', blank=True)
 
     #def __str__(self):
 	#	return self.name
 
 class Trainer(models.Model):
+	date = models.DateTimeField(auto_now_add=True)
 	venues = models.CharField(max_length=100)
 	trained = models.IntegerField()
 	male = models.IntegerField()
 	female = models.IntegerField()
 	report = models.CharField(max_length=100)
 	recommendation = models.CharField(max_length=100)
+	post = models.ForeignKey(Post, on_delete=models.CASCADE,)
