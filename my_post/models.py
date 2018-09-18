@@ -22,4 +22,4 @@ class Trainer(models.Model):
 	female = models.IntegerField()
 	report = models.CharField(max_length=100)
 	recommendation = models.CharField(max_length=100)
-	post = models.ForeignKey(Post, on_delete=models.CASCADE,)
+	post = models.ForeignKey('Post', on_delete=models.CASCADE,)
