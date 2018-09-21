@@ -1,6 +1,6 @@
 {% extends 'base_layout.html' %}
 {% block content %}
-<h1>Your Details</h1>
+<!--<h1>Your Details</h1>
 <form>
     <div class="container">
         <div class="form-group">
@@ -19,7 +19,7 @@
             <label>Social Media Handles : {{post.social_media}}</label>
         </div>
     </div>
-</form>
+</form>-->
 <h1>Add Your Training Details</h1>
 <form method="post">
     <div class="container">
@@ -56,7 +56,7 @@
             <label for="exampleFormControlTextarea1">Recommendations of people to follow up for impact assessment</label>
             <textarea class="form-control" name="recommendation" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-        <!--<input type="hidden" id="postid" name="post_id" value="{{post.id}}">-->
+        <input type="hidden" id="postid" name="post_id" value="{{post.id}}">
 	
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
