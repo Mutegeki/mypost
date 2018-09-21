@@ -39,3 +39,21 @@ def article_list(request):
         template = loader.get_template('articles/article_list.html')
     return HttpResponse(template.render())
 
+
+@csrf_exempt
+def show_list(request):
+    if request.method == 'POST':
+        trainer = Trainer(
+            venues=request.POST['venues'],
+            trained=request.POST['trained'],
+            male=request.POST['male'],
+            female=request.POST['female'],
+            report=request.POST['report'],
+            recommendation=request.POST['recommendation'],
+            post_id=request.POST['post_id']
+        )
+        trainer.save()
+        return render(request, 'articles/show_list.html', {'post':post, 'trainer':trainer})
+    else:
+        trainers=Trainer.objects.filter(post_id=post.id).order_by('date')
+        return render(request, 'articles/show_list.html', {'post':post, 'trainers':trainers})
