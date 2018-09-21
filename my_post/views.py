@@ -55,5 +55,5 @@ def show_list(request):
         trainer.save()
         return render(request, 'articles/show_list.html', {'post':post, 'trainer':trainer})
     else:
-        trainers=Trainer.objects.filter(post_id=post.id).order_by('date')
+        trainers = Trainer.objects.filter(post_id=post.id).order_by('date')
         return render(request, 'articles/show_list.html', {'post':post, 'trainers':trainers})
