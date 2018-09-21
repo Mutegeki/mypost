@@ -1,14 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>List form</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-</head>
-<body>
-    <h1>Main posts</h1>
-</body>
-</html>
+{% extends 'base_layout.html' %}
+{% block content %}
+    <h1>Register</h1>
+    <form method="post">
+        <div class="container">
+            <div class="form-group row">
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Firstname</label>
+                <div class="col-sm-10">
+                    <input type="name" class="form-control form-control-sm" name="first" id="colFormLabelSm" placeholder="firstname">
+                    {{error}}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Lastname</label>
+                <div class="col-sm-10">
+                    <input type="name" class="form-control form-control-sm" name="last" id="colFormLabelSm" placeholder="lastname">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Phone</label>
+                <div class="col-sm-10">
+                    <input type="phone" class="form-control form-control-sm" name="phone_number" id="colFormLabelSm" placeholder="+256">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control form-control-sm" name="email" id="colFormLabelSm" placeholder="col-form-label-sm">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Social Media Handles</label>
+                <div class="col-sm-10">
+<input type="text" class="form-control form-control-sm" name="social_media" id="colFormLabelSm" placeholder="col-form-label-sm">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+{% endblock %}
